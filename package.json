@@ -1,0 +1,28 @@
+{
+  "name": "Requiram",
+  "version": "0.0.1",
+  "description": "A Node.js package that concatenates and uglify modules from requirejs and serve them as a unique file and makes them work in the front end.",
+  "repository": {
+    "type": "git",
+    "url": "github.com/rouabhi/Requiram"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "requirejs",
+    "sendfile",
+    "uglify",
+    "middleware"
+  ],
+  "author": {
+    "name": "Samir ROUABHI",
+    "email": "rouabhi@gmail.com"
+  },
+  "license": "GNU GPL v2",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "uglify-js": "*"
+  }
+}
