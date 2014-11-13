@@ -33,4 +33,4 @@ The middleware is now mounted to the path ```/requiram```. In your HTML file you
 The **lib.js** should be added once, in the top of the list, to permit to your modules to work.
 
 ## What if my modules are modified?##
-The final file (here app.js) is created on the first time it is invoqued. Modification date is not checked. So to rebuild it, you shouldjust just relauch **node.js**.
+The final file (here app.js) is created on the first time it is invoqued. Modification date is not checked. So to rebuild it, you should just just relaunch **node.js**.
