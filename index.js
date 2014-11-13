@@ -43,7 +43,7 @@ function  requiram(){
 		var package     = require(src+packageName+".json");
 		package.name = packageName;
 		if (package.startup && package.modules.indexOf(package.startup)<0) package.modules.push( package.startup );
-		res.status(200).send(doUglify( package ));
+		res.status(200).type('.js').send(doUglify( package ));
 	}
 }
 
