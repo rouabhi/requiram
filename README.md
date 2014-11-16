@@ -21,9 +21,12 @@ In the ```node.js``` part, you have to use Requiram **middleware**.
 ```javascript
 app.use( '/requiram', requiram.static({
                         src:__dirname+'/sourceDirectory',
-                        dest:__dirname+'/destinationDirectory'
+                        dest:__dirname+'/destinationDirectory',
+                        minify:false
                     }) );
 ```
+
+```minify``` parameter is optional. Default value is ```true```.
 
 The middleware is now mounted to the path ```/requiram```. In your HTML file you should include these 2 lines:
 ```html
