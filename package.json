@@ -1,6 +1,10 @@
 {
   "name": "requiram",
+<<<<<<< HEAD
   "version": "0.0.4",
+=======
+  "version": "0.0.2",
+>>>>>>> parent of d52d882... Package name fix
   "description": "A Node.js package that concatenates and uglify modules from requirejs and serve them as a unique file and makes them work in the front end.",
   "repository": {
     "type": "git",
