@@ -12,7 +12,7 @@ function  requiram(){
  	function doUglify( package ){
  		var result = [], uglifyJS = require("uglify-js");
  		for(var i in package.modules) {
- 			result +="define(\""+package.modules[i]+"\");\n"+ uglifyJS.minify( src+package.modules[i]+".js").code+"\n";
+ 			result +="define(\""+package.modules[i]+"\");"+ uglifyJS.minify( src+package.modules[i]+".js" ).code+"\n";
  		}
 		if (package.startup) result += "require(\""+package.startup+"\");";
 		require("fs").writeFile(dest+package.name+".js", result, function(err){
@@ -24,7 +24,7 @@ function  requiram(){
  	}
 
 	function middleware(req, res, next){
-		var packageName = req.url.match(/^\/[\w\.]+\.js$/);
+		var packageName = req.url.match(/\/[\w\.\-]+\.js$/);
 
 		if (!packageName) {
 			res.status(500);

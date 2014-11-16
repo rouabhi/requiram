@@ -1,6 +1,6 @@
 {
   "name": "requiram",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Node.js package that concatenates and uglify modules from requirejs and serve them as a unique file and makes them work in the front end.",
   "repository": {
     "type": "git",
