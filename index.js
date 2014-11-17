@@ -20,8 +20,6 @@ function  requiram(){
 
  		for(var i in package.modules) {
  			filename = src+package.modules[i]+".js";
- 					 console.log("doUglify -- filename:",filename);
- 					 console.log("doUglify -- minify:",minify);
  			result += "define(\""+package.modules[i]+"\");"+
  					 (minify ? (uglifyJS.minify( filename ).code+"\n"):("\n"+fs.readFileSync( filename )+"\n"));
  		}
