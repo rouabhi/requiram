@@ -5,12 +5,14 @@ function  requiram(){
  requiram.static=function(options){
  	var src=options.src,
  		dest=options.dest,
+ 		json=options.json,
  		minify = (typeof options.minify === "undefined") ? true:options.minify,
  		builtPackages=[],
  		fs = require("fs");
 
  	src  += src.slice(-1)=="/"?"":"/";
  	dest += dest.slice(-1)=="/"?"":"/";
+ 	json += json ? (json.slice(-1)=="/"?"":"/"):src;
  	return middleware;
 
  	function doUglify( package ){
@@ -49,7 +51,7 @@ function  requiram(){
 			return;
 		}
 
-		var package     = require(src+packageName+".json");
+		var package     = require(json+packageName+".json");
 		package.name = packageName;
 		if (package.startup && package.modules.indexOf(package.startup)<0) package.modules.push( package.startup );
 		res.status(200).type('.js').send(doUglify( package ));

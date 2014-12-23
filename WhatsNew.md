@@ -1,5 +1,8 @@
 #devicize - What's new#
 
+##v 0.0.5 json parameter added##
+An optional json parameter added permits to put json schemas in a different directory.
+
 ##v 0.0.4 Code minification is optional##
 A new parameter is added. If ```minify=true``` the code is minified, otherwise it is served as is. This may be helpful for debug.
 
